@@ -25,10 +25,6 @@ The following **optional** features are implemented:
 * [ ] Add support for custom tip percentage
 * [x] Add support for splitting the tip and total
 
-The following **additional** features are implemented:
-
-* [ ] List anything else that you can get done to improve the functionality!
-
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
