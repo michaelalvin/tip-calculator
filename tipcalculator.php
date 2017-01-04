@@ -1,13 +1,13 @@
 <html>
 <head>
 	<title>Welcome</title>
-
   <link rel="stylesheet" type="text/css" href="style.css">
 
 </head>
 
 
-<body>
+<body background = "back.jpg"; background-size: 80px 60px;
+    background-repeat: no-repeat;>
 	<div id = "pagewrap">
 	<h2>Tip Calculator</h2>
 
@@ -27,7 +27,10 @@
 		<input type = "radio" name = "percentages" value ="10%"> 10%
 		<input type = "radio" name = "percentages" value ="15%"> 15%
 		<input type = "radio" name = "percentages" value ="20%"> 20%
-		<br> <br>
+		<br>
+		<input type = "radio" name = "percentages" value = "Custom"> Custom:
+		<input type = 'text' name = 'percentagesCustom'>
+		<br><br>
 		</div>
 
 		<input type = 'submit' name ='submit' value = 'Submit' class: 'submit2'>
@@ -40,6 +43,7 @@ if(isset($_POST['submit'])){
 $bill = $_POST['bill'];
 $people = $_POST['people'];
 $percentages = $_POST['percentages'];
+$percentagesCustom = $_POST['percentagesCustom']/100;
 
 if($_POST['bill'] > 0 and $_POST['people'] > 0){
 if($percentages == "10%"){
@@ -74,11 +78,29 @@ if($percentages == "10%"){
 		echo "<b> Your total per person: </b><br>$";
 		echo $bill*1.20/$people;
 	 }
+
+	 if($percentages == "Custom"){
+		if($_POST['percentagesCustom'] > 0){
+ 		echo "<b> Your tip is: </b><br>$";
+ 		echo $bill*$percentagesCustom;
+ 		echo "<br>";
+ 		echo "<b> Your total is: </b><br>$";
+ 		echo $bill*(1+$percentagesCustom);
+ 		echo "<br>";
+ 		echo "<b> Your total per person: </b><br>$";
+ 		echo $bill*(1+$percentagesCustom)/$people;
+ 	 }
+ }
+
 }
 }
 
 if($_POST['bill'] < 0 or $_POST['people'] < 0){
-	echo "<b> Insert a different amount of bill or number of people. </b><br>";
+	echo "<b> Insert a different amount of bill or number of people or custom tip percent. </b><br>";
+}
+
+if($_POST['percentagesCustom'] < 0){
+ echo "<b> Insert a different amount of bill or number of people or custom tip percent. </b><br>";
 }
 	?>
 </div>
