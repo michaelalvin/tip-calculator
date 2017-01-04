@@ -1,0 +1,23 @@
+body {
+
+  background-image: -webkit-radial-gradient(right bottom, ellipse farthest-corner, #CFE7FA 0%, #6393C1 100%);
+  font-family: "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
+  text-align: center;
+  color: white;
+  font-size: 26px;
+  font-weight: lighter;
+}
+
+#pagewrap {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.outout{
+  font-style: italic;
+  font-size: 20px;
+}
+
+.submit2{
+    width: 40em;  height: 4em;
+}
