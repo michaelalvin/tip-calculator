@@ -1,6 +1,7 @@
 body {
 
-  background-image: -webkit-radial-gradient(right bottom, ellipse farthest-corner, #CFE7FA 0%, #6393C1 100%);
+  /*background-image: -webkit-radial-gradient(right bottom, ellipse farthest-corner, #CFE7FA 0%, #6393C1 100%);*/
+  background-image: url("back.jpg");
   font-family: "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
   text-align: center;
   color: white;
